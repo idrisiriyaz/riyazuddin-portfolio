@@ -253,7 +253,7 @@ function App() {
       </motion.nav>
 
       {/* Hero Section */}
-      <section className="relative min-h-screen flex items-center justify-center px-6 overflow-hidden">
+      <section className="relative min-h-screen flex items-center justify-center px-6 overflow-hidden pt-20 md:pt-24">
         <motion.div
           className="max-w-4xl mx-auto text-center z-10"
           style={{ y: textY }}
