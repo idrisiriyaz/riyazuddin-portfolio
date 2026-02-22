@@ -203,7 +203,6 @@ function App() {
                 src={`${import.meta.env.BASE_URL}assets/idrisi-logo.svg`}
                 alt="Idrisi Logo"
                 className="w-7 h-6"
-                style={{ filter: 'invert(1)' }}
               />
               <span className="font-bold text-base tracking-[0.25em] text-white uppercase">Riyazuddin</span>
             </motion.div>
@@ -214,11 +213,10 @@ function App() {
                 <motion.button
                   key={section}
                   onClick={() => scrollToSection(section)}
-                  className={`relative uppercase text-[11px] font-medium tracking-[0.22em] transition-all duration-300 ${
-                    activeSection === section
-                      ? 'text-white'
-                      : 'text-white/35 hover:text-white/80'
-                  }`}
+                  className={`relative uppercase text-[11px] font-medium tracking-[0.22em] transition-all duration-300 ${activeSection === section
+                    ? 'text-white'
+                    : 'text-white/35 hover:text-white/80'
+                    }`}
                   whileHover={{ y: -1 }}
                   whileTap={{ scale: 0.95 }}
                 >
@@ -260,9 +258,8 @@ function App() {
                   <motion.button
                     key={section}
                     onClick={() => scrollToSection(section)}
-                    className={`flex items-center gap-3 w-full text-left uppercase text-xs font-medium tracking-[0.22em] transition-colors ${
-                      activeSection === section ? 'text-white' : 'text-white/40 hover:text-white'
-                    }`}
+                    className={`flex items-center gap-3 w-full text-left uppercase text-xs font-medium tracking-[0.22em] transition-colors ${activeSection === section ? 'text-white' : 'text-white/40 hover:text-white'
+                      }`}
                     whileTap={{ scale: 0.98 }}
                     initial={{ x: -20, opacity: 0 }}
                     animate={{ x: 0, opacity: 1 }}
@@ -287,7 +284,6 @@ function App() {
             alt=""
             aria-hidden="true"
             className="w-[70vw] max-w-[700px] opacity-[0.025]"
-            style={{ filter: 'invert(1)' }}
           />
         </div>
 
@@ -316,7 +312,6 @@ function App() {
                 src={`${import.meta.env.BASE_URL}assets/idrisi-logo.svg`}
                 alt="Logo"
                 className="w-11 h-9"
-                style={{ filter: 'invert(1)' }}
               />
               {/* Corner accents */}
               <span className="absolute top-0 left-0 w-3 h-3 border-t border-l border-white/60 rounded-tl-lg -translate-x-[1px] -translate-y-[1px]" />
@@ -355,7 +350,7 @@ function App() {
           >
             <span className="w-10 h-px bg-white/25" />
             <span className="text-xs md:text-sm tracking-[0.45em] text-white/45 uppercase font-light">
-              Full Stack Developer
+              Full Stack Engineer
             </span>
             <span className="w-10 h-px bg-white/25" />
           </motion.div>
@@ -466,7 +461,7 @@ function App() {
 
           <div className="grid md:grid-cols-3 gap-6">
             {[
-              { icon: Code, title: 'Full Stack Dev', desc: 'Expert in both frontend and backend technologies, creating end-to-end solutions from UI to infrastructure.' },
+              { icon: Code, title: 'Full Stack Engineer', desc: 'Expert in both frontend and backend technologies, creating end-to-end solutions from UI to infrastructure.' },
               { icon: Briefcase, title: '4+ Years XP', desc: 'Proven track record in developing scalable applications and cloud-based solutions across multiple industries.' },
               { icon: Star, title: '50k+ Downloads', desc: 'Published successful mobile applications with high user engagement and stellar store ratings.' }
             ].map((item, index) => (
@@ -848,11 +843,10 @@ function App() {
             src={`${import.meta.env.BASE_URL}assets/idrisi-logo.svg`}
             alt="Logo"
             className="w-5 h-4 opacity-40"
-            style={{ filter: 'invert(1)' }}
           />
           <p className="text-white/25 text-xs tracking-[0.35em] uppercase">Riyazuddin Idrisi</p>
         </div>
-        <p className="text-white/15 text-[11px] tracking-[0.3em] uppercase">© 2025 · All Rights Reserved</p>
+        <p className="text-white/15 text-[11px] tracking-[0.3em] uppercase">© {new Date().getFullYear()} · All Rights Reserved</p>
       </footer>
 
       {/* Scroll to Top */}
