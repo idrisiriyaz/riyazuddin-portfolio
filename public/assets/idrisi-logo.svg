@@ -1,0 +1,8 @@
+<svg width="88" height="76" viewBox="0 0 88 76" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- I letter body: thick diagonal stroke pointing to bottom tip -->
+  <path d="M50 62L43 76L27 46L12 20H25L50 62Z" fill="white"/>
+  <!-- Top bar + R shape: horizontal bar with stepped shelves and R leg -->
+  <path d="M37 20L55 50L61 40L55 30H67L88 0H25L31 11H67L61 20H37Z" fill="white"/>
+  <!-- Small I serif cap: top-left notch -->
+  <path d="M6 11H18L12 0H0L6 11Z" fill="white"/>
+</svg>
