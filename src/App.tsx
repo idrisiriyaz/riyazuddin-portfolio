@@ -204,7 +204,6 @@ function App() {
                 alt="Idrisi Logo"
                 className="w-7 h-6"
               />
-              <span className="font-bold text-base tracking-[0.25em] text-white uppercase">Riyazuddin</span>
             </motion.div>
 
             {/* Desktop Navigation */}
@@ -294,32 +293,7 @@ function App() {
           initial="hidden"
           animate="visible"
         >
-          {/* Animated Logo Badge */}
-          <motion.div className="mb-10 flex justify-center" variants={itemVariants}>
-            <motion.div
-              className="relative w-20 h-20 border border-white/20 rounded-2xl flex items-center justify-center"
-              animate={{
-                boxShadow: [
-                  '0 0 15px rgba(255,255,255,0.05)',
-                  '0 0 35px rgba(255,255,255,0.15)',
-                  '0 0 15px rgba(255,255,255,0.05)',
-                ],
-              }}
-              transition={{ duration: 3, repeat: Infinity, ease: 'easeInOut' }}
-              whileHover={{ scale: 1.1, borderColor: 'rgba(255,255,255,0.5)' }}
-            >
-              <img
-                src={`${import.meta.env.BASE_URL}assets/idrisi-logo.svg`}
-                alt="Logo"
-                className="w-11 h-9"
-              />
-              {/* Corner accents */}
-              <span className="absolute top-0 left-0 w-3 h-3 border-t border-l border-white/60 rounded-tl-lg -translate-x-[1px] -translate-y-[1px]" />
-              <span className="absolute top-0 right-0 w-3 h-3 border-t border-r border-white/60 rounded-tr-lg translate-x-[1px] -translate-y-[1px]" />
-              <span className="absolute bottom-0 left-0 w-3 h-3 border-b border-l border-white/60 rounded-bl-lg -translate-x-[1px] translate-y-[1px]" />
-              <span className="absolute bottom-0 right-0 w-3 h-3 border-b border-r border-white/60 rounded-br-lg translate-x-[1px] translate-y-[1px]" />
-            </motion.div>
-          </motion.div>
+
 
           {/* Name */}
           <motion.div variants={itemVariants}>
@@ -330,14 +304,6 @@ function App() {
               transition={{ duration: 1, ease: 'easeOut' }}
             >
               RIYAZUDDIN
-            </motion.h1>
-            <motion.h1
-              className="text-6xl md:text-[7rem] font-black tracking-[0.15em] leading-none text-white/15 mb-10"
-              initial={{ scale: 0.85, opacity: 0 }}
-              animate={{ scale: 1, opacity: 1 }}
-              transition={{ duration: 1, ease: 'easeOut', delay: 0.08 }}
-            >
-              IDRISI
             </motion.h1>
           </motion.div>
 
