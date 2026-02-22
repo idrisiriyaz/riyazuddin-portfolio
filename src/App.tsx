@@ -60,7 +60,7 @@ function App() {
   const skills = {
     'Frontend': ['Next.js', 'React.js', 'React Native', 'Flutter', 'HTML', 'CSS', 'Material UI', 'Shadcn UI'],
     'Backend': ['Node.js', 'Spring Boot', '.NET', 'C#', 'Java'],
-    'Databases': ['PostgreSQL', 'MySQL', 'MongoDB', 'MSSQL', 'Firebase'],
+    'Databases': ['PostgreSQL', 'MySQL', 'MSSQL', 'MongoDB', 'Firebase'],
     'Cloud & DevOps': ['AWS Lambda', 'API Gateway', 'Step Functions', 'Supabase', 'Serverless Framework'],
     'Programming': ['JavaScript', 'TypeScript', 'Dart'],
     'AI Tools': ['AI SDKs', 'Large Language Models (LLMs)'],
@@ -69,7 +69,7 @@ function App() {
 
   const experiences = [
     {
-      title: 'Software Developer',
+      title: 'Full Stack Engineer',
       company: 'ParkourAI Pvt Ltd',
       location: 'Mumbai',
       period: 'Mar 2024 – Present',
@@ -120,7 +120,8 @@ function App() {
     {
       name: 'WeLinkJob',
       description: 'Professional job networking platform connecting employers and job seekers',
-      tech: ['React Native', '.NET', 'MSSQL']
+      tech: ['React Native', '.NET', 'MSSQL'],
+      websites: ['https://play.google.com/store/apps/details?id=com.welinkjobs&hl=en_IN']
     },
     {
       name: 'Hukum & Keebo',
@@ -130,7 +131,8 @@ function App() {
     {
       name: 'YouAdMe',
       description: 'Social commerce platform with integrated advertising features',
-      tech: ['React Native', 'Spring Boot', 'Firebase']
+      tech: ['React Native', 'Spring Boot', 'Firebase'],
+      websites: ['https://youadme.en.aptoide.com/app']
     }
   ];
 
