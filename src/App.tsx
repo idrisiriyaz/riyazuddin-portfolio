@@ -4,6 +4,7 @@ import {
   Mail,
   Phone,
   Github,
+  Linkedin,
   ExternalLink,
   Code,
   Briefcase,
@@ -53,13 +54,13 @@ function App() {
   const scrollToTop = () => window.scrollTo({ top: 0, behavior: 'smooth' });
 
   const skills = {
-    'Frontend': ['Next.js', 'React.js', 'React Native', 'Flutter', 'HTML', 'CSS', 'Material UI', 'Shadcn UI'],
-    'Backend': ['Node.js', 'Spring Boot', '.NET', 'C#', 'Java'],
-    'Databases': ['PostgreSQL', 'MySQL', 'MSSQL', 'MongoDB', 'Firebase'],
-    'Cloud & DevOps': ['AWS Lambda', 'API Gateway', 'Step Functions', 'Supabase', 'Serverless Framework'],
-    'Programming': ['JavaScript', 'TypeScript', 'Dart'],
-    'AI Tools': ['AI SDKs', 'Large Language Models (LLMs)'],
-    'Tools': ['Git', 'Postman', 'VS Code', 'Android Studio', 'Xcode']
+    'Frontend': ['React.js', 'Next.js', 'React Native', 'Redux ToolKit', 'Context API', 'Zustand', 'HTML', 'CSS', 'MUI', 'Shadcn UI'],
+    'Backend': ['Node.js', 'GraphQL', 'Spring Boot', '.NET'],
+    'Databases': ['PostgreSQL', 'MySQL', 'MongoDB', 'MSSQL'],
+    'Cloud & DevOps': ['AWS Lambda', 'API Gateway', 'Step Functions', 'Route53', 'CloudFront', 'DynamoDB', 'CloudFormation', 'Cognito', 'Supabase', 'Serverless Framework', 'Firebase'],
+    'Programming': ['JavaScript', 'TypeScript', 'Dart', 'C#', 'Java'],
+    'AI Tools': ['AI SDKs for UI', 'Large Language Models (LLMs)', 'LangChain', 'n8n'],
+    'Tools': ['Figma', 'Git', 'Postman', 'VS Code', 'Android Studio', 'Xcode']
   };
 
   const experiences = [
@@ -67,24 +68,36 @@ function App() {
       title: 'Full Stack Engineer',
       company: 'ParkourAI Pvt Ltd',
       location: 'Mumbai',
-      period: 'Mar 2024 – Present',
+      period: 'Mar 2024 – Oct 2025',
       highlights: [
-        'Built ETL pipelines for electricity bill big data using Next.js & PostgreSQL',
-        'Developed serverless solutions with AWS Lambda, API Gateway, Step Functions',
-        'Improved UI/UX with Supabase integration'
-      ]
+        'Built scalable UIs with React.js using Hooks, Lifecycle Events, and state management.',
+        'Developed ETL pipelines for electricity bill big data using Next.js (TypeScript) and PostgreSQL, Node.js, handling 100K+ bills per month with integrated analytics via Chart.js.',
+        'Delivered serverless solutions with AWS Lambda (Node.js), API Gateway, Step Functions, and IaC using CloudFormation.',
+        'Designed and deployed a full-stack web application with Next.js + Material UI, integrated with Mapbox and Google Maps.',
+        'Worked extensively with AWS: S3, EC2, CloudFront, DynamoDB, GraphQL, Lambda, Cognito.',
+        'Enhanced UX and performance through Supabase integration for faster data handling.',
+        'Improved Unit Test coverage from 40% → 90%, driving 100%+ team productivity increase with strong integration testing.',
+        'Researched and implemented modular architecture, Micro Frontends, and Web Components for reusability and scalability.',
+        'Actively participated in Agile development, collaborating with stakeholders and product owners.'
+      ],
+      techStack: 'React.js (TypeScript), Next.js (TypeScript), Material UI, Tailwind CSS, Bootstrap, Node.js, PostgreSQL, MySQL, AWS'
     },
     {
       title: 'Software Developer',
-      company: 'Wow Info Biz Pvt Ltd',
+      company: 'Wow Infobiz Pvt Ltd',
       location: 'Mumbai',
       period: 'Mar 2022 – Apr 2024',
       highlights: [
-        'Built cross-platform apps with React Native & Next.js',
-        'Integrated Agora.io SDK for live streaming',
-        'Implemented payment gateways (Razorpay, Google Pay)',
-        'Published apps with 50k+ downloads on Play Store & App Store'
-      ]
+        'Collaborated with the team to plan, Figma design, and review UI/UX implementations.',
+        'Implemented state management with Context API, Redux, Redux Toolkit, Zustand, improving scalability and maintainability.',
+        'Designed and developed highly responsive UI components using React, JavaScript, TypeScript and modern workflows.',
+        'Troubleshot, debugged, and optimized front-end performance for reliability and scalability.',
+        'Developed front-end architecture to support dynamic user interactions.',
+        'Enhanced code quality with unit and integration tests (Jest, Enzyme, ESLint), leading to more stable production releases.',
+        'Managed CI/CD pipelines and release workflows for smooth deployment and performance monitoring.',
+        'Actively worked in Agile/Scrum: sprint planning, daily stand-ups, backlog grooming, and retrospectives.'
+      ],
+      techStack: 'React.js (TypeScript), Next.js (TypeScript), Material UI, Tailwind, Bootstrap, Node.js, MongoDB, MySQL, AWS'
     },
     {
       title: 'App Developer',
@@ -92,41 +105,48 @@ function App() {
       location: 'Mumbai',
       period: 'Mar 2021 – Mar 2022',
       highlights: [
-        'Developed Android modules with Redux Toolkit & Context API',
-        'Integrated REST APIs & SDKs for scalable solutions',
-        'Collaborated with UI/UX team to enhance app usability'
-      ]
+        'Implemented state management using Context API, Redux, and Redux Toolkit for scalability and maintainability.',
+        'Built and published mobile apps with Android SDK, iOS SDK, and Deep Linking on Google Play Store and Apple App Store.',
+        'Integrated real-time live streaming using Agora.io SDK for audio and video communication.',
+        'Implemented AI-driven features: camera filters and video editing using Banuba SDK and VESDK.',
+        'Integrated push notifications for Android and iOS to improve user retention.',
+        'Utilized Firebase for backend support and real-time data handling.',
+        'Implemented payment gateways (Razorpay, Google Pay) and push notifications for seamless UX.',
+        'Built cross-platform apps with React Native, achieving 50K+ downloads on Play Store & App Store.'
+      ],
+      techStack: 'React.js, React Native, Material UI, React Native Paper, Firebase, Agora SDK'
     }
   ];
 
   const projects = [
     {
-      name: 'Utility Portals',
-      description: 'Comprehensive utility management platforms for bill payments and bridging services',
-      tech: ['Next.js', 'AWS', 'Supabase', 'MySQL'],
-      websites: ['bridgeit.in', 'billtopay.in']
+      name: 'Utility ERP (bridgeit.in)',
+      description: 'Utility ERP built with Next.js (TypeScript), Node.js, AWS, Supabase, PostgreSQL.',
+      tech: ['Next.js', 'Node.js', 'AWS', 'Supabase', 'PostgreSQL'],
+      websites: ['https://bridgeit.in']
     },
     {
-      name: 'Minaret App',
-      description: 'Islamic app for Azan times and mosque events with 10k+ downloads',
-      tech: ['React Native', 'Firebase', 'Redux'],
+      name: 'Utility Payment Portals (billtopay.in)',
+      description: 'Utility payment portals built with Next.js (TypeScript), Node.js (TypeScript), AWS, MySQL.',
+      tech: ['Next.js', 'Node.js', 'AWS', 'MySQL'],
+      websites: ['https://billtopay.in']
+    },
+    {
+      name: 'Minaret',
+      description: 'React.js and React Native app for broadcasting Azan & mosque events.',
+      tech: ['React.js', 'React Native'],
       downloads: '10k+'
     },
     {
       name: 'WeLinkJob',
-      description: 'Professional job networking platform connecting employers and job seekers',
-      tech: ['React Native', '.NET', 'MSSQL'],
+      description: 'Job networking platform with React.js (TypeScript), React Native, .NET, MSSQL.',
+      tech: ['React.js', 'React Native', '.NET', 'MSSQL'],
       websites: ['https://play.google.com/store/apps/details?id=com.welinkjobs&hl=en_IN']
     },
     {
-      name: 'Hukum & Keebo',
-      description: 'Food delivery applications with real-time order tracking',
-      tech: ['React Native', 'Spring Boot', 'MySQL', 'MongoDB']
-    },
-    {
       name: 'YouAdMe',
-      description: 'Social commerce platform with integrated advertising features',
-      tech: ['React Native', 'Spring Boot', 'Firebase'],
+      description: 'Social commerce platform using React.js, React Native, Spring Boot, Firebase.',
+      tech: ['React.js', 'React Native', 'Spring Boot', 'Firebase'],
       websites: ['https://youadme.en.aptoide.com/app']
     }
   ];
@@ -328,8 +348,7 @@ function App() {
             animate={{ y: 0, opacity: 1 }}
             transition={{ duration: 0.8, delay: 0.4 }}
           >
-            4+ years of experience in Next.js, Node.js, React.js, AWS, and Serverless Architecture.
-            Building scalable web and mobile apps that reach thousands of users.
+            Full Stack Engineer with 4+ years building scalable web and mobile apps using React.js, Next.js, React Native, and Node.js. Skilled in state management, modern UI frameworks, cloud services (AWS, Supabase, Firebase), and SDK integrations including live streaming and video editing. Experienced in big data pipelines, REST/GraphQL APIs, and deploying to Play Store & App Store.
           </motion.p>
 
           {/* Contact Links */}
@@ -338,9 +357,10 @@ function App() {
             variants={itemVariants}
           >
             {[
-              { icon: Mail, text: 'riyazidrisi4@gmail.com', href: 'mailto:riyazidrisi4@gmail.com' },
               { icon: Phone, text: '+91-9702586589', href: 'tel:+919702586589' },
-              { icon: Github, text: 'github.com/idrisiriyaz', href: 'https://github.com/idrisiriyaz' }
+              { icon: Mail, text: 'riyazidrisi4@gmail.com', href: 'mailto:riyazidrisi4@gmail.com' },
+              { icon: Github, text: 'github.com/idrisiriyaz', href: 'https://github.com/idrisiriyaz' },
+              { icon: Linkedin, text: 'LinkedIn', href: 'https://in.linkedin.com/in/riyaz-idrisi' }
             ].map((contact, index) => (
               <motion.a
                 key={index}
@@ -594,6 +614,11 @@ function App() {
                       </motion.li>
                     ))}
                   </ul>
+                  {(exp as { techStack?: string }).techStack && (
+                    <p className="mt-6 pt-4 border-t border-white/10 text-white/30 text-xs font-mono tracking-wider">
+                      Tech: {(exp as { techStack: string }).techStack}
+                    </p>
+                  )}
                 </motion.div>
               ))}
             </div>
@@ -732,7 +757,7 @@ function App() {
                 <GraduationCap className="w-8 h-8 text-white/60 group-hover:text-white transition-colors" />
               </motion.div>
               <h3 className="text-2xl md:text-3xl font-black text-white mb-3 tracking-tight group-hover:text-white transition-colors">
-                Bachelor of Science in Information Technology
+                B.Sc. in Information Technology
               </h3>
               <p className="text-white/40 font-medium tracking-[0.2em] uppercase text-sm mb-8">Mumbai University</p>
               <div className="flex justify-center gap-10 text-white/30 text-xs font-mono tracking-widest">
@@ -796,6 +821,21 @@ function App() {
               >
                 <Github size={16} />
                 View GitHub
+              </motion.a>
+              <motion.a
+                href="https://in.linkedin.com/in/riyaz-idrisi"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center gap-3 border border-white/20 text-white/70 px-8 py-4 font-bold text-xs tracking-[0.2em] uppercase hover:border-white/50 hover:text-white hover:bg-white/[0.05] transition-all duration-300"
+                whileHover={{ scale: 1.05, y: -4 }}
+                whileTap={{ scale: 0.96 }}
+                initial={{ y: 30, opacity: 0 }}
+                whileInView={{ y: 0, opacity: 1 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.6, delay: 0.2 }}
+              >
+                <Linkedin size={16} />
+                LinkedIn
               </motion.a>
             </div>
           </motion.div>
