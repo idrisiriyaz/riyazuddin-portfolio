@@ -52,15 +52,15 @@
     }
 
     .glass-card {
-        @apply bg-white/[0.03] backdrop-blur-lg border border-white/10 rounded-2xl;
+        @apply bg-white/[0.03] backdrop-blur-lg border border-white/10;
     }
 
     .btn-primary {
-        @apply bg-white text-black px-6 py-3 rounded-xl font-semibold hover:bg-white/90 transition-all duration-300;
+        @apply bg-white text-black px-6 py-3 font-semibold hover:bg-white/90 transition-all duration-300;
     }
 
     .btn-secondary {
-        @apply border border-white/20 text-white px-6 py-3 rounded-xl font-semibold hover:border-white/50 hover:bg-white/5 transition-all duration-300;
+        @apply border border-white/20 text-white px-6 py-3 font-semibold hover:border-white/50 hover:bg-white/5 transition-all duration-300;
     }
 
     .section-number {
@@ -72,7 +72,7 @@
     }
 
     .futuristic-card {
-        @apply bg-white/[0.02] border border-white/10 rounded-2xl transition-all duration-500;
+        @apply bg-white/[0.02] border border-white/10 transition-all duration-500;
     }
 
     .futuristic-card:hover {
@@ -81,7 +81,7 @@
     }
 
     .skill-badge {
-        @apply px-4 py-2 border border-white/15 text-white/50 rounded-lg text-xs font-medium tracking-wide transition-all duration-300 cursor-default;
+        @apply px-4 py-2 border border-white/15 text-white/50 text-xs font-medium tracking-wide transition-all duration-300 cursor-default;
     }
 
     .skill-badge:hover {

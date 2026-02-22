@@ -233,7 +233,7 @@ function App() {
 
             {/* Mobile Menu Button */}
             <motion.button
-              className="md:hidden p-2 rounded-lg border border-white/15 text-white/70 hover:text-white hover:border-white/40 transition-all"
+              className="md:hidden p-2 border border-white/15 text-white/70 hover:text-white hover:border-white/40 transition-all"
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
               whileTap={{ scale: 0.95 }}
             >
@@ -347,7 +347,7 @@ function App() {
                 href={contact.href}
                 target={contact.href.startsWith('http') ? '_blank' : undefined}
                 rel={contact.href.startsWith('http') ? 'noopener noreferrer' : undefined}
-                className="flex items-center gap-2.5 bg-white/[0.03] backdrop-blur-sm px-5 py-3 rounded-xl border border-white/10 hover:border-white/30 hover:bg-white/[0.07] transition-all duration-300 group"
+                className="flex items-center gap-2.5 bg-white/[0.03] backdrop-blur-sm px-5 py-3 border border-white/10 hover:border-white/30 hover:bg-white/[0.07] transition-all duration-300 group"
                 whileHover={{ scale: 1.04, y: -3 }}
                 whileTap={{ scale: 0.96 }}
                 initial={{ y: 40, opacity: 0 }}
@@ -363,7 +363,7 @@ function App() {
           {/* CTA Button */}
           <motion.button
             onClick={() => scrollToSection('projects')}
-            className="bg-white text-black px-10 py-4 rounded-xl font-bold text-xs tracking-[0.25em] uppercase hover:bg-white/90 transition-all duration-300 group"
+            className="bg-white text-black px-10 py-4 font-bold text-xs tracking-[0.25em] uppercase hover:bg-white/90 transition-all duration-300 group"
             whileHover={{ scale: 1.05, y: -2, boxShadow: '0 0 40px rgba(255,255,255,0.25)' }}
             whileTap={{ scale: 0.96 }}
             initial={{ y: 30, opacity: 0 }}
@@ -388,7 +388,7 @@ function App() {
           ].map((dot, i) => (
             <motion.div
               key={i}
-              className="absolute rounded-full bg-white"
+                className="absolute bg-white"
               style={{
                 top: dot.top,
                 left: (dot as Record<string, unknown>).left as string | undefined,
@@ -441,10 +441,10 @@ function App() {
                 whileHover={{ scale: 1.03, y: -8 }}
               >
                 {/* Corner accents */}
-                <span className="absolute top-0 left-0 w-4 h-4 border-t border-l border-white/20 group-hover:border-white/50 transition-colors rounded-tl-2xl" />
-                <span className="absolute bottom-0 right-0 w-4 h-4 border-b border-r border-white/20 group-hover:border-white/50 transition-colors rounded-br-2xl" />
+                <span className="absolute top-0 left-0 w-4 h-4 border-t border-l border-white/20 group-hover:border-white/50 transition-colors" />
+                <span className="absolute bottom-0 right-0 w-4 h-4 border-b border-r border-white/20 group-hover:border-white/50 transition-colors" />
 
-                <div className="w-12 h-12 border border-white/15 rounded-xl mx-auto mb-6 flex items-center justify-center group-hover:border-white/40 transition-all duration-300">
+                <div className="w-12 h-12 border border-white/15 mx-auto mb-6 flex items-center justify-center group-hover:border-white/40 transition-all duration-300">
                   <item.icon className="w-6 h-6 text-white/50 group-hover:text-white transition-colors" />
                 </div>
                 <h3 className="text-lg font-bold text-white mb-3 tracking-wider text-center group-hover:text-white transition-colors">
@@ -635,8 +635,8 @@ function App() {
                 whileHover={{ scale: 1.04, y: -8 }}
               >
                 {/* Corner accents */}
-                <span className="absolute top-0 left-0 w-5 h-5 border-t border-l border-white/15 group-hover:border-white/40 transition-colors rounded-tl-2xl" />
-                <span className="absolute bottom-0 right-0 w-5 h-5 border-b border-r border-white/15 group-hover:border-white/40 transition-colors rounded-br-2xl" />
+                <span className="absolute top-0 left-0 w-5 h-5 border-t border-l border-white/15 group-hover:border-white/40 transition-colors" />
+                <span className="absolute bottom-0 right-0 w-5 h-5 border-b border-r border-white/15 group-hover:border-white/40 transition-colors" />
 
                 <h3 className="text-lg font-black text-white mb-3 tracking-wide group-hover:text-white transition-colors">
                   {project.name}
@@ -649,7 +649,7 @@ function App() {
                   {project.tech.map((tech, techIndex) => (
                     <motion.span
                       key={tech}
-                      className="px-3 py-1 border border-white/12 text-white/40 rounded-lg text-[11px] font-medium tracking-wide"
+                      className="px-3 py-1 border border-white/12 text-white/40 text-[11px] font-medium tracking-wide"
                       initial={{ scale: 0 }}
                       whileInView={{ scale: 1 }}
                       viewport={{ once: true }}
@@ -719,13 +719,13 @@ function App() {
             transition={{ duration: 0.8 }}
           >
             <div className="futuristic-card p-12 text-center group relative overflow-hidden">
-              <span className="absolute top-0 left-0 w-6 h-6 border-t border-l border-white/20 group-hover:border-white/50 transition-colors rounded-tl-2xl" />
-              <span className="absolute top-0 right-0 w-6 h-6 border-t border-r border-white/20 group-hover:border-white/50 transition-colors rounded-tr-2xl" />
-              <span className="absolute bottom-0 left-0 w-6 h-6 border-b border-l border-white/20 group-hover:border-white/50 transition-colors rounded-bl-2xl" />
-              <span className="absolute bottom-0 right-0 w-6 h-6 border-b border-r border-white/20 group-hover:border-white/50 transition-colors rounded-br-2xl" />
+              <span className="absolute top-0 left-0 w-6 h-6 border-t border-l border-white/20 group-hover:border-white/50 transition-colors" />
+              <span className="absolute top-0 right-0 w-6 h-6 border-t border-r border-white/20 group-hover:border-white/50 transition-colors" />
+              <span className="absolute bottom-0 left-0 w-6 h-6 border-b border-l border-white/20 group-hover:border-white/50 transition-colors" />
+              <span className="absolute bottom-0 right-0 w-6 h-6 border-b border-r border-white/20 group-hover:border-white/50 transition-colors" />
 
               <motion.div
-                className="w-16 h-16 border border-white/20 rounded-2xl mx-auto mb-8 flex items-center justify-center group-hover:border-white/45 transition-all"
+                className="w-16 h-16 border border-white/20 mx-auto mb-8 flex items-center justify-center group-hover:border-white/45 transition-all"
                 whileHover={{ rotate: 360 }}
                 transition={{ duration: 0.6 }}
               >
@@ -771,7 +771,7 @@ function App() {
             <div className="flex flex-wrap justify-center gap-4">
               <motion.a
                 href="mailto:riyazidrisi4@gmail.com"
-                className="flex items-center gap-3 bg-white text-black px-8 py-4 rounded-xl font-bold text-xs tracking-[0.2em] uppercase hover:bg-white/90 transition-all duration-300"
+                className="flex items-center gap-3 bg-white text-black px-8 py-4 font-bold text-xs tracking-[0.2em] uppercase hover:bg-white/90 transition-all duration-300"
                 whileHover={{ scale: 1.05, y: -4, boxShadow: '0 0 40px rgba(255,255,255,0.25)' }}
                 whileTap={{ scale: 0.96 }}
                 initial={{ y: 30, opacity: 0 }}
@@ -786,7 +786,7 @@ function App() {
                 href="https://github.com/idrisiriyaz"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center gap-3 border border-white/20 text-white/70 px-8 py-4 rounded-xl font-bold text-xs tracking-[0.2em] uppercase hover:border-white/50 hover:text-white hover:bg-white/[0.05] transition-all duration-300"
+                className="flex items-center gap-3 border border-white/20 text-white/70 px-8 py-4 font-bold text-xs tracking-[0.2em] uppercase hover:border-white/50 hover:text-white hover:bg-white/[0.05] transition-all duration-300"
                 whileHover={{ scale: 1.05, y: -4 }}
                 whileTap={{ scale: 0.96 }}
                 initial={{ y: 30, opacity: 0 }}
@@ -820,7 +820,7 @@ function App() {
         {showScrollTop && (
           <motion.button
             onClick={scrollToTop}
-            className="fixed bottom-8 right-8 p-3 bg-white text-black rounded-xl shadow-lg z-40"
+            className="fixed bottom-8 right-8 p-3 bg-white text-black shadow-lg z-40"
             initial={{ scale: 0, opacity: 0 }}
             animate={{ scale: 1, opacity: 1 }}
             exit={{ scale: 0, opacity: 0 }}
