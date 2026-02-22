@@ -12,18 +12,21 @@ export default {
           300: '#cbd5e1',
           400: '#94a3b8',
           500: '#64748b',
-          600: '#475569',
-          700: '#334155',
-          800: '#1e293b',
-          900: '#0f172a',
-          950: '#020617'
+          600: '#3a3a3a',
+          700: '#1f1f1f',
+          800: '#141414',
+          900: '#0a0a0a',
+          950: '#000000'
         }
       },
       backgroundImage: {
         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
         'gradient-conic': 'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
-        'dark-gradient': 'linear-gradient(135deg, #0f172a 0%, #1e293b 100%)',
-        'card-gradient': 'linear-gradient(145deg, rgba(30, 41, 59, 0.8) 0%, rgba(15, 23, 42, 0.9) 100%)',
+        'dark-gradient': 'linear-gradient(135deg, #000000 0%, #0a0a0a 100%)',
+        'card-gradient': 'linear-gradient(145deg, rgba(15, 15, 15, 0.95) 0%, rgba(5, 5, 5, 0.98) 100%)',
+      },
+      fontFamily: {
+        mono: ['JetBrains Mono', 'Fira Code', 'Consolas', 'monospace'],
       },
       animation: {
         'fade-in': 'fadeIn 0.5s ease-in-out',
@@ -34,6 +37,9 @@ export default {
         'scale-in': 'scaleIn 0.5s ease-out',
         'float': 'float 3s ease-in-out infinite',
         'glow': 'glow 2s ease-in-out infinite alternate',
+        'scan': 'scan 4s linear infinite',
+        'flicker': 'flicker 8s ease-in-out infinite',
+        'border-glow': 'borderGlow 2s ease-in-out infinite alternate',
       },
       keyframes: {
         fadeIn: {
@@ -65,8 +71,24 @@ export default {
           '50%': { transform: 'translateY(-10px)' },
         },
         glow: {
-          '0%': { boxShadow: '0 0 20px rgba(34, 197, 94, 0.4)' },
-          '100%': { boxShadow: '0 0 30px rgba(34, 197, 94, 0.6)' },
+          '0%': { textShadow: '0 0 20px rgba(255, 255, 255, 0.4)' },
+          '100%': { textShadow: '0 0 40px rgba(255, 255, 255, 0.9), 0 0 80px rgba(255, 255, 255, 0.3)' },
+        },
+        scan: {
+          '0%': { transform: 'translateY(-100%)' },
+          '100%': { transform: 'translateY(100vh)' },
+        },
+        flicker: {
+          '0%, 100%': { opacity: '1' },
+          '92%': { opacity: '1' },
+          '93%': { opacity: '0.6' },
+          '94%': { opacity: '1' },
+          '96%': { opacity: '0.8' },
+          '97%': { opacity: '1' },
+        },
+        borderGlow: {
+          '0%': { boxShadow: '0 0 5px rgba(255,255,255,0.1), inset 0 0 5px rgba(255,255,255,0.05)' },
+          '100%': { boxShadow: '0 0 20px rgba(255,255,255,0.2), inset 0 0 10px rgba(255,255,255,0.05)' },
         },
       },
     },

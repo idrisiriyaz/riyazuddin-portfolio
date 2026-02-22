@@ -16,70 +16,133 @@
             'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
         -webkit-font-smoothing: antialiased;
         -moz-osx-font-smoothing: grayscale;
-        background: #0f172a;
+        background: #000000;
         color: white;
         overflow-x: hidden;
     }
 
     /* Custom scrollbar */
     ::-webkit-scrollbar {
-        width: 8px;
+        width: 6px;
     }
 
     ::-webkit-scrollbar-track {
-        background: #1e293b;
+        background: #000000;
     }
 
     ::-webkit-scrollbar-thumb {
-        background: linear-gradient(135deg, #22c55e, #3b82f6);
-        border-radius: 4px;
+        background: rgba(255, 255, 255, 0.3);
+        border-radius: 3px;
     }
 
     ::-webkit-scrollbar-thumb:hover {
-        background: linear-gradient(135deg, #16a34a, #2563eb);
+        background: rgba(255, 255, 255, 0.6);
     }
 
     /* Selection color */
     ::selection {
-        background: rgba(34, 197, 94, 0.3);
+        background: rgba(255, 255, 255, 0.2);
         color: white;
     }
 }
 
 @layer components {
     .text-gradient {
-        @apply bg-gradient-to-r from-green-400 to-blue-500 bg-clip-text text-transparent;
+        @apply bg-gradient-to-r from-white to-white/50 bg-clip-text text-transparent;
     }
 
     .glass-card {
-        @apply bg-white/5 backdrop-blur-lg border border-white/10 rounded-2xl;
+        @apply bg-white/[0.03] backdrop-blur-lg border border-white/10 rounded-2xl;
     }
 
     .btn-primary {
-        @apply bg-gradient-to-r from-green-500 to-blue-600 text-white px-6 py-3 rounded-xl font-semibold hover:from-green-400 hover:to-blue-500 transition-all duration-300 shadow-lg hover:shadow-green-500/25;
+        @apply bg-white text-black px-6 py-3 rounded-xl font-semibold hover:bg-white/90 transition-all duration-300;
+    }
+
+    .btn-secondary {
+        @apply border border-white/20 text-white px-6 py-3 rounded-xl font-semibold hover:border-white/50 hover:bg-white/5 transition-all duration-300;
+    }
+
+    .section-number {
+        @apply text-white/20 text-xs tracking-[0.4em] uppercase font-mono mb-3 block;
+    }
+
+    .section-divider {
+        @apply w-16 h-px bg-white/20 mx-auto mt-6;
+    }
+
+    .futuristic-card {
+        @apply bg-white/[0.02] border border-white/10 rounded-2xl transition-all duration-500;
+    }
+
+    .futuristic-card:hover {
+        @apply border-white/25;
+        box-shadow: 0 0 30px rgba(255, 255, 255, 0.04);
+    }
+
+    .skill-badge {
+        @apply px-4 py-2 border border-white/15 text-white/50 rounded-lg text-xs font-medium tracking-wide transition-all duration-300 cursor-default;
+    }
+
+    .skill-badge:hover {
+        @apply border-white/50 text-white bg-white/5;
     }
 }
 
 @layer utilities {
     .text-shadow {
-        text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+        text-shadow: 0 2px 4px rgba(0, 0, 0, 0.8);
     }
 
     .text-shadow-lg {
-        text-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+        text-shadow: 0 4px 8px rgba(0, 0, 0, 0.9);
     }
 
     .animate-glow {
         animation: glow 2s ease-in-out infinite alternate;
     }
 
+    .animate-flicker {
+        animation: flicker 8s ease-in-out infinite;
+    }
+
+    .grid-bg {
+        background-image:
+            linear-gradient(rgba(255, 255, 255, 0.04) 1px, transparent 1px),
+            linear-gradient(90deg, rgba(255, 255, 255, 0.04) 1px, transparent 1px);
+        background-size: 60px 60px;
+    }
+
+    .dot-grid-bg {
+        background-image: radial-gradient(circle, rgba(255, 255, 255, 0.15) 1px, transparent 1px);
+        background-size: 30px 30px;
+    }
+
     @keyframes glow {
         from {
-            text-shadow: 0 0 20px rgba(34, 197, 94, 0.5);
+            text-shadow: 0 0 20px rgba(255, 255, 255, 0.4);
         }
-
         to {
-            text-shadow: 0 0 30px rgba(34, 197, 94, 0.8);
+            text-shadow: 0 0 40px rgba(255, 255, 255, 0.9), 0 0 80px rgba(255, 255, 255, 0.2);
         }
+    }
+
+    @keyframes scan {
+        0% { transform: translateY(-100%); }
+        100% { transform: translateY(100vh); }
+    }
+
+    @keyframes flicker {
+        0%, 100% { opacity: 1; }
+        92% { opacity: 1; }
+        93% { opacity: 0.6; }
+        94% { opacity: 1; }
+        96% { opacity: 0.8; }
+        97% { opacity: 1; }
+    }
+
+    @keyframes float {
+        0%, 100% { transform: translateY(0px); }
+        50% { transform: translateY(-10px); }
     }
 }
