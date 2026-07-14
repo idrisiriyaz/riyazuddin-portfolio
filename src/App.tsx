@@ -54,33 +54,52 @@ function App() {
   const scrollToTop = () => window.scrollTo({ top: 0, behavior: 'smooth' });
 
   const skills = {
-    'Frontend': ['React.js', 'Next.js', 'React Native', 'Redux ToolKit', 'Context API', 'Zustand', 'HTML', 'CSS', 'MUI', 'Shadcn UI'],
-    'Backend': ['Node.js', 'GraphQL', 'Spring Boot', '.NET'],
-    'Databases': ['PostgreSQL', 'MySQL', 'MongoDB', 'MSSQL'],
-    'Cloud & DevOps': ['AWS Lambda', 'API Gateway', 'Step Functions', 'Route53', 'CloudFront', 'DynamoDB', 'CloudFormation', 'Cognito', 'Supabase', 'Serverless Framework', 'Firebase'],
-    'Programming': ['JavaScript', 'TypeScript', 'Dart', 'C#', 'Java'],
-    'AI Tools': ['AI SDKs for UI', 'Large Language Models (LLMs)', 'LangChain', 'n8n'],
-    'Tools': ['Figma', 'Git', 'Postman', 'VS Code', 'Android Studio', 'Xcode']
+    'Frontend': ['React.js', 'Next.js', 'React Native', 'JavaScript', 'TypeScript', 'Redux Toolkit', 'Context API', 'Zustand', 'HTML5', 'CSS3', 'Tailwind CSS', 'Material UI', 'Shadcn UI', 'Bootstrap'],
+    'Backend': ['Node.js', 'Express.js', 'Nest.js', 'REST APIs', 'GraphQL APIs', 'JWT Authentication', 'PM2', 'Nginx'],
+    'Databases': ['PostgreSQL', 'MySQL', 'MongoDB'],
+    'Cloud / DevOps': ['AWS (Lambda, EC2, S3, CloudFront, API Gateway, Step Functions)', 'Serverless Framework', 'CI/CD', 'Supabase', 'Firebase'],
+    'AI / Automation': ['LLMs', 'LangChain', 'OpenAI APIs', 'AI SDKs', 'OCR Automation', 'n8n'],
+    'Tools': ['Git', 'GitHub', 'Bitbucket', 'Postman', 'VS Code', 'Android Studio', 'Xcode', 'Figma', 'Cursor']
   };
 
   const experiences = [
     {
+      title: 'React Js Developer',
+      company: 'Aykva Management Pvt Ltd',
+      location: 'Mumbai',
+      period: 'Nov 2025 – March 2026',
+      highlights: [
+        'Delivered multiple end-to-end web application projects using MongoDB, Express.js, Next.js, Node.js, and modern JavaScript frameworks from requirement gathering to production deployment.',
+        'Developed scalable admin panels, dashboards, and enterprise systems using React.js, Node.js, Express.js, Tailwind CSS, and JWT authentication.',
+        'Built Health AI Insight, an AI-powered healthcare platform using React.js, Node.js, MongoDB, REST APIs, and AI integrations for predictive analytics and personalized recommendations.',
+        'Integrated third-party services including payment gateways, email APIs, SMS APIs, authentication APIs, and AI/ML services.',
+        'Engineered secure backend systems using Node.js, Express.js, REST APIs, JWT, bcrypt, and middleware architecture.',
+        'Implemented backend services using NestJS with modular architecture, controllers, providers, guards, and scalable REST API design.',
+        'Performed deployments using AWS, VPS servers, PM2, Nginx, Git, and CI/CD pipelines.',
+        'Led debugging, feature enhancement, maintenance, and production support in Agile environments.'
+      ],
+      techStack: 'React.js, Next.js, Node.js, Express.js, NestJS, MongoDB, Tailwind CSS, JWT, AWS, PM2, Nginx'
+    },
+    {
       title: 'Full Stack Engineer',
       company: 'ParkourAI Pvt Ltd',
       location: 'Mumbai',
-      period: 'Mar 2024 – Oct 2025',
+      period: 'Apr 2024 – Oct 2025',
       highlights: [
-        'Built scalable UIs with React.js using Hooks, Lifecycle Events, and state management.',
-        'Developed ETL pipelines for electricity bill big data using Next.js (TypeScript) and PostgreSQL, Node.js, handling 100K+ bills per month with integrated analytics via Chart.js.',
-        'Delivered serverless solutions with AWS Lambda (Node.js), API Gateway, Step Functions, and IaC using CloudFormation.',
-        'Designed and deployed a full-stack web application with Next.js + Material UI, integrated with Mapbox and Google Maps.',
-        'Worked extensively with AWS: S3, EC2, CloudFront, DynamoDB, GraphQL, Lambda, Cognito.',
-        'Enhanced UX and performance through Supabase integration for faster data handling.',
-        'Improved Unit Test coverage from 40% → 90%, driving 100%+ team productivity increase with strong integration testing.',
-        'Researched and implemented modular architecture, Micro Frontends, and Web Components for reusability and scalability.',
-        'Actively participated in Agile development, collaborating with stakeholders and product owners.'
+        'Built scalable front-end applications using React.js with Hooks, lifecycle methods, and modern state management.',
+        'Developed ETL pipelines for electricity billing systems handling 100K+ bills monthly using Next.js, Node.js, and PostgreSQL.',
+        'Delivered analytics dashboards with Chart.js for operational reporting and insights.',
+        'Built serverless architectures using AWS Lambda, API Gateway, Step Functions, and CloudFormation.',
+        'Developed map-based full-stack applications integrated with Mapbox and Google Maps APIs.',
+        'Worked extensively with AWS services including EC2, S3, CloudFront, DynamoDB, and Lambda.',
+        'Improved performance and data workflows through Supabase integration.',
+        'Managed databases using MongoDB, MySQL, and PostgreSQL with schema design, indexing, and performance optimization.',
+        'Implemented advanced modules such as PDF generation, QR systems, Excel reports, printing modules, and file upload systems.',
+        'Implemented OCR automation using OpenAI Vision to extract meter readings from images.',
+        'Built AI chat agents that converted user queries into SQL and returned conversational analytics using Vercel AI SDK.',
+        'Collaborated closely with product teams in Agile sprint cycles.'
       ],
-      techStack: 'React.js (TypeScript), Next.js (TypeScript), Material UI, Tailwind CSS, Bootstrap, Node.js, PostgreSQL, MySQL, AWS'
+      techStack: 'React.js, Next.js, Node.js, PostgreSQL, MySQL, MongoDB, AWS, Supabase, Chart.js, Mapbox'
     },
     {
       title: 'Software Developer',
@@ -88,16 +107,17 @@ function App() {
       location: 'Mumbai',
       period: 'Mar 2022 – Apr 2024',
       highlights: [
-        'Collaborated with the team to plan, Figma design, and review UI/UX implementations.',
-        'Implemented state management with Context API, Redux, Redux Toolkit, Zustand, improving scalability and maintainability.',
-        'Designed and developed highly responsive UI components using React, JavaScript, TypeScript and modern workflows.',
-        'Troubleshot, debugged, and optimized front-end performance for reliability and scalability.',
-        'Developed front-end architecture to support dynamic user interactions.',
-        'Enhanced code quality with unit and integration tests (Jest, Enzyme, ESLint), leading to more stable production releases.',
-        'Managed CI/CD pipelines and release workflows for smooth deployment and performance monitoring.',
-        'Actively worked in Agile/Scrum: sprint planning, daily stand-ups, backlog grooming, and retrospectives.'
+        'Collaborated with teams to convert Figma designs into scalable production-ready UI systems.',
+        'Developed responsive web applications using React.js, Next.js, JavaScript, and TypeScript.',
+        'Implemented scalable state management using Redux, Redux Toolkit, Context API, and Zustand.',
+        'Improved front-end reliability through debugging, optimization, and performance tuning.',
+        'Designed reusable front-end architecture for dynamic and maintainable applications.',
+        'Enhanced code quality through unit and integration testing using Jest, Enzyme, and ESLint.',
+        'Managed CI/CD workflows for smooth releases and performance monitoring.',
+        'Worked in Agile/Scrum teams participating in sprint planning, standups, and retrospectives.',
+        'Gained hands-on exposure to microservices and serverless architectures.'
       ],
-      techStack: 'React.js (TypeScript), Next.js (TypeScript), Material UI, Tailwind, Bootstrap, Node.js, MongoDB, MySQL, AWS'
+      techStack: 'React.js, Next.js, TypeScript, Redux Toolkit, Zustand, Jest, CI/CD'
     },
     {
       title: 'App Developer',
@@ -105,48 +125,52 @@ function App() {
       location: 'Mumbai',
       period: 'Mar 2021 – Mar 2022',
       highlights: [
-        'Implemented state management using Context API, Redux, and Redux Toolkit for scalability and maintainability.',
-        'Built and published mobile apps with Android SDK, iOS SDK, and Deep Linking on Google Play Store and Apple App Store.',
-        'Integrated real-time live streaming using Agora.io SDK for audio and video communication.',
-        'Implemented AI-driven features: camera filters and video editing using Banuba SDK and VESDK.',
-        'Integrated push notifications for Android and iOS to improve user retention.',
-        'Utilized Firebase for backend support and real-time data handling.',
-        'Implemented payment gateways (Razorpay, Google Pay) and push notifications for seamless UX.',
-        'Built cross-platform apps with React Native, achieving 50K+ downloads on Play Store & App Store.'
+        'Built and deployed cross-platform mobile applications using React Native for Android and iOS.',
+        'Successfully published apps on Google Play Store and Apple App Store.',
+        'Integrated Agora SDK for real-time live streaming, audio, and video communication.',
+        'Implemented AI-driven camera filters and video editing using Banuba SDK and VESDK.',
+        'Integrated push notifications for Android and iOS to improve retention and engagement.',
+        'Used Firebase for authentication, real-time data handling, and backend support.',
+        'Integrated payment gateways including Razorpay and Google Pay.',
+        'Achieved 50K+ app downloads across platforms.'
       ],
-      techStack: 'React.js, React Native, Material UI, React Native Paper, Firebase, Agora SDK'
+      techStack: 'React Native, Firebase, Agora SDK, Banuba SDK, Razorpay'
     }
   ];
 
   const projects = [
     {
       name: 'Utility ERP (bridgeit.in)',
-      description: 'Utility ERP built with Next.js (TypeScript), Node.js, AWS, Supabase, PostgreSQL.',
+      description: 'Enterprise ERP platform built with Next.js, Node.js, AWS, Supabase, and PostgreSQL.',
       tech: ['Next.js', 'Node.js', 'AWS', 'Supabase', 'PostgreSQL'],
       websites: ['https://bridgeit.in']
     },
     {
       name: 'Utility Payment Portals (billtopay.in)',
-      description: 'Utility payment portals built with Next.js (TypeScript), Node.js (TypeScript), AWS, MySQL.',
+      description: 'Utility bill payment portals built with Next.js, Node.js, AWS, and MySQL.',
       tech: ['Next.js', 'Node.js', 'AWS', 'MySQL'],
       websites: ['https://billtopay.in']
     },
     {
+      name: 'Health AI Insight',
+      description: 'AI-powered healthcare analytics and recommendation platform using React.js, Node.js, MongoDB, and OpenAI APIs.',
+      tech: ['React.js', 'Node.js', 'MongoDB', 'OpenAI APIs']
+    },
+    {
       name: 'Minaret',
-      description: 'React.js and React Native app for broadcasting Azan & mosque events.',
-      tech: ['React.js', 'React Native'],
-      downloads: '10k+'
+      description: 'React.js and React Native app for broadcasting Azan and mosque events.',
+      tech: ['React.js', 'React Native']
     },
     {
       name: 'WeLinkJob',
-      description: 'Job networking platform with React.js (TypeScript), React Native, .NET, MSSQL.',
+      description: 'Job networking platform using React.js, React Native, .NET, and MSSQL.',
       tech: ['React.js', 'React Native', '.NET', 'MSSQL'],
       websites: ['https://play.google.com/store/apps/details?id=com.welinkjobs&hl=en_IN']
     },
     {
       name: 'YouAdMe',
-      description: 'Social commerce platform using React.js, React Native, Spring Boot, Firebase.',
-      tech: ['React.js', 'React Native', 'Spring Boot', 'Firebase'],
+      description: 'Social commerce platform using React.js, React Native, and Firebase.',
+      tech: ['React.js', 'React Native', 'Firebase'],
       websites: ['https://youadme.en.aptoide.com/app']
     }
   ];
@@ -348,7 +372,7 @@ function App() {
             animate={{ y: 0, opacity: 1 }}
             transition={{ duration: 0.8, delay: 0.4 }}
           >
-            Full Stack Engineer with 4+ years building scalable web and mobile apps using React.js, Next.js, React Native, and Node.js. Skilled in state management, modern UI frameworks, cloud services (AWS, Supabase, Firebase), and SDK integrations including live streaming and video editing. Experienced in big data pipelines, REST/GraphQL APIs, and deploying to Play Store & App Store.
+            Results-driven Full Stack Engineer with 5 years of experience designing, developing, and deploying scalable web and mobile applications. Strong expertise in React.js, Next.js, React Native, Node.js, and cloud platforms including AWS, Supabase, and Firebase. Proven track record of building enterprise dashboards, AI-powered platforms, ETL systems, real-time applications, and cross-platform mobile apps.
           </motion.p>
 
           {/* Contact Links */}
@@ -447,9 +471,9 @@ function App() {
 
           <div className="grid md:grid-cols-3 gap-6">
             {[
-              { icon: Code, title: 'Full Stack Engineer', desc: 'Expert in both frontend and backend technologies, creating end-to-end solutions from UI to infrastructure.' },
-              { icon: Briefcase, title: '4+ Years XP', desc: 'Proven track record in developing scalable applications and cloud-based solutions across multiple industries.' },
-              { icon: Star, title: '50k+ Downloads', desc: 'Published successful mobile applications with high user engagement and stellar store ratings.' }
+              { icon: Code, title: 'Full Stack Engineer', desc: 'Expert in frontend, backend, and cloud — delivering end-to-end solutions from UI architecture to production infrastructure.' },
+              { icon: Briefcase, title: '5 Years XP', desc: 'Proven track record building enterprise dashboards, AI platforms, ETL systems, and cross-platform mobile apps.' },
+              { icon: Star, title: '50k+ Downloads', desc: 'Published successful mobile applications with high user engagement and App Store / Play Store deployments.' }
             ].map((item, index) => (
               <motion.div
                 key={index}
